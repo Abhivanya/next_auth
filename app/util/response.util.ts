@@ -6,7 +6,7 @@ export const sendResponse = <T>(
   message: string = "Internal Server Error ",
   data?: T
 ) => {
-  NextResponse.json(
+  return NextResponse.json(
     {
       message,
       succes,

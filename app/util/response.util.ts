@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export const sendResponse = <T>(
-  succes: boolean,
+  success: boolean,
   status: number = 500,
   message: string = "Internal Server Error ",
   data?: T
@@ -9,7 +9,7 @@ export const sendResponse = <T>(
   return NextResponse.json(
     {
       message,
-      succes,
+      success,
       data: data ?? null,
     },
     { status }
